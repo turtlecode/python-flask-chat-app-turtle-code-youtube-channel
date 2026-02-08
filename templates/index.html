@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Login/Registration Panel -->
+        <div id="loginPanel" class="panel active">
+            <div class="login-form">
+                <h1>Messaging Application</h1>
+                <input 
+                    type="text" 
+                    id="usernameInput" 
+                    placeholder="Enter username" 
+                    class="form-input"
+                >
+                <button id="loginButton" class="btn btn-primary">
+                    Login
+                </button>
+                <div id="loginError" class="error-message"></div>
+            </div>
+        </div>
+
+        <!-- Main Chat Panel -->
+        <div id="chatPanel" class="panel">
+            <div class="chat-header">
+                <h1>Messages</h1>
+                <div class="user-info">
+                    <span id="currentUsername" class="username-display"></span>
+                    <button id="logoutButton" class="btn btn-small">Logout</button>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <!-- Users List -->
+                <div class="users-sidebar">
+                    <h3>Users Online</h3>
+                    <div id="usersList" class="users-list"></div>
+                </div>
+
+                <!-- Chat Area -->
+                <div class="chat-main">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="welcome-message">
+                            <p>Select a user to start chatting</p>
+                        </div>
+                    </div>
+
+                    <!-- Message Input - Temizlenmiş versiyon -->
+                    <div class="messageBox">
+                        <input 
+                            required="" 
+                            placeholder="Message..." 
+                            type="text" 
+                            id="messageInput"
+                            autocomplete="off"
+                        />
+                        <button id="sendButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                                <path
+                                    fill="none"
+                                    d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                                ></path>
+                                <path
+                                    stroke-linejoin="round"
+                                    stroke-linecap="round"
+                                    stroke-width="33.67"
+                                    stroke="#6c6c6c"
+                                    d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
