@@ -7,6 +7,8 @@ A real-time messaging application built with Flask, Socket.IO, and modern web te
 For a complete step-by-step tutorial on building this application, check out the YouTube channel:
 👉 **[TurtleCode - YouTube Channel](https://www.youtube.com/@turtlecode)**
 
+<img width="921" height="639" alt="Screenshot 2026-02-08 114755" src="https://github.com/user-attachments/assets/1c47e3cb-35a9-4931-96df-650918bdbe5e" />
+
 ---
 
 ## Features
